@@ -381,18 +381,38 @@
 
         game_1 {
             bindings = <&kp NUMBER_1>;
-            key-positions = <3 4>;
+            key-positions = <3 31>;
+            layers = <2>;
         };
 
         game_2 {
             bindings = <&kp NUMBER_2>;
-            key-positions = <13 14>;
+            key-positions = <13 31>;
             layers = <2>;
         };
 
         game_3 {
             bindings = <&kp NUMBER_3>;
-            key-positions = <23 24>;
+            key-positions = <23 31>;
+            layers = <2>;
+        };
+
+        game_4 {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <4 31>;
+            layers = <2>;
+        };
+
+        game_5 {
+            bindings = <&kp N5>;
+            key-positions = <31 14>;
+            layers = <2>;
+        };
+
+        game_6 {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <31 24>;
+            layers = <2>;
         };
     };
 
@@ -402,12 +422,12 @@
         // Base alpha layer
 
         default_layer {
-            label = "Base";
+            label = "colemak";
             bindings = <
 &kp Q              &kp W            &kp F             &kp P              &kp B              &kp J                  &kp L                   &kp U              &kp Y             &kp SEMICOLON
 &hrmLeft LGUI A    &hrmLeft LALT R  &hrmLeft LCTRL S  &hrmLeft LSHIFT T  &kp G              &kp M                  &hrmRight LEFT_SHIFT N  &hrmRight LCTRL E  &hrmRight LALT I  &hrmRight LGUI O
 &hrmLeft LSHIFT Z  &kp X            &kp C             &kp D              &kp V              &kp K                  &kp H                   &kp COMMA          &kp DOT           &hrmRight LSHIFT SLASH
-                                                      &kp TAB            &customlt 4 SPACE  &customlt 4 BACKSPACE  &sl 0
+                                                      &kp TAB            &customlt 3 SPACE  &customlt 4 BACKSPACE  &customlt 5 DELETE
             >;
         };
 
@@ -429,22 +449,30 @@
             >;
         };
 
-        nav {
+        navmed {
             bindings = <
-&trans        &trans        &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&sticky LGUI  &sticky LALT  &sticky LCTRL  &sticky LSHFT  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                           &trans         &trans  &trans  &trans
+&none         &bt BT_PRV    &bt BT_CLR     &bt BT_NXT     &none  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS  &kp C_VOL_DN   &kp C_VOLUME_UP  &kp C_NEXT
+&sticky LGUI  &sticky LALT  &sticky LCTRL  &sticky LSHFT  &none  &kp C_MUTE            &kp LEFT        &kp DOWN       &kp UP           &kp RIGHT
+&undo         &cut          &copy          &paste         &redo  &kp C_BRIGHTNESS_DEC  &kp HOME        &kp PAGE_DOWN  &kp PG_UP        &kp END
+                                           &none          &none  &kp C_STOP            &none
             >;
         };
 
-        settings {
-            label = "Sett.";
+        num {
             bindings = <
-&bootloader     &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none  &unstick  &none  &bootloader
-&none           &none  &none  &none       &bt BT_SEL 1  &bt BT_SEL 4  &none  &none     &none  &none
-&studio_unlock  &none  &none  &none       &bt BT_SEL 2  &bt BT_SEL 5  &none  &none     &none  &studio_unlock
-                              &none       &none         &none         &none
+&kp LBKT   &kp N7  &kp N8  &kp N9         &kp RBKT   &none     &none      &unstick   &none     &none
+&kp SEMI   &kp N4  &kp N5  &kp N6         &kp EQUAL  &none     &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&kp GRAVE  &kp N1  &kp N2  &kp N3         &kp MINUS  &kp BSPC  &kp SPACE  &kp COMMA  &kp DOT   &kp FSLH
+                           &kp BACKSLASH  &kp N0     &none     &none
+            >;
+        };
+
+        func {
+            bindings = <
+&none  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none      &none      &none     &none
+&none  &kp F4  &kp F5  &kp F6  &kp F11  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp F1  &kp F2  &kp F3  &kp F12  &none  &none      &none      &none     &none
+                       &none   &none    &none  &none
             >;
         };
     };
