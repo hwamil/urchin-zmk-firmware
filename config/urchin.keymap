@@ -64,7 +64,7 @@
         require-prior-idle-ms = <150>;
         quick-tap-ms = <175>;
         hold-trigger-on-release;
-        hold-trigger-key-positions = <7 8 9 10 11 12 20 21 22 23 24 25 33 34 35 36 37 38 46 47 48 49 50 51 60 61 62 63 59>;
+        hold-trigger-key-positions = <34 35 36 37 38 46 47 48 49 50 51 60 61 62 63 59 5 9 5 6 7 15 16 17 25 26 27 8 9 18 19 28 29>;
     };
 
     hrmRight: hrmRight {
@@ -78,7 +78,7 @@
         require-prior-idle-ms = <150>;
         quick-tap-ms = <175>;
         hold-trigger-on-release;
-        hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 26 27 28 29 30 31 39 40 41 42 43 44 53 54 55 56 57>;
+        hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>;
     };
 
     sticky: sticky {
@@ -255,122 +255,146 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <15 16>;
+            key-positions = <1 2>;
             layers = <0 1>;
             timeout-ms = <75>;
         };
 
         enter {
             bindings = <&kp RETURN>;
-            key-positions = <22 23>;
+            key-positions = <7 8>;
             timeout-ms = <75>;
         };
 
         wsleft {
             bindings = <&kp LA(LC(H))>;
-            key-positions = <30 31>;
+            key-positions = <13 14>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
+            layers = <0 1>;
         };
 
         wsright {
             bindings = <&kp LA(LC(L))>;
-            key-positions = <34 33>;
+            key-positions = <34 15 16>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
+            layers = <0 1>;
         };
 
         bandforth {
             bindings = <&kp LA(S)>;
-            key-positions = <40 41>;
+            key-positions = <40 41 11 12>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
+            layers = <0 1>;
         };
 
         wincap {
             bindings = <&kp LS(LA(LC(S)))>;
-            key-positions = <43 42>;
+            key-positions = <43 42 6 7>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         clipboard {
             bindings = <&kp LS(LA(LC(LG(C))))>;
-            key-positions = <17 16>;
+            key-positions = <2 3>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
+            layers = <0 1>;
         };
 
         math {
             bindings = <&kp LA(LS(LC(M)))>;
-            key-positions = <21 22>;
+            key-positions = <26 27>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         searchcommands {
             bindings = <&kp LS(LA(LC(LG(S))))>;
-            key-positions = <47 48>;
+            key-positions = <47 48 10 11 12 13>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         game {
             bindings = <&tog 2>;
-            key-positions = <50 49>;
+            key-positions = <50 49 28 29>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         paren {
             bindings = <&paren>;
-            key-positions = <17 21>;
+            key-positions = <3 6>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         brackets {
             bindings = <&bracket>;
-            key-positions = <16 22>;
+            key-positions = <2 7>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         braces {
             bindings = <&braces>;
-            key-positions = <15 23>;
+            key-positions = <1 8>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         ko {
             bindings = <&ko>;
-            key-positions = <48 49>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <200>;
-        };
-
-        capsword {
-            bindings = <&caps_word>;
-            key-positions = <31 33>;
+            key-positions = <48 49 27 28>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         en {
             bindings = <&en>;
-            key-positions = <41 42>;
+            key-positions = <41 42 21 22>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
 
         del {
             bindings = <&kp DELETE>;
-            key-positions = <14 15>;
+            key-positions = <0 1>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
-     };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <14 15>;
+        };
+
+        game_tab {
+            bindings = <&kp TAB>;
+            key-positions = <3 2>;
+            layers = <2>;
+        };
+
+        game_1 {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <3 4>;
+        };
+
+        game_2 {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <13 14>;
+            layers = <2>;
+        };
+
+        game_3 {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <23 24>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -380,76 +404,41 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp Q  &kp W  &kp F  &kp P    &kp B             &kp J      &kp L    &kp U      &kp Y    &kp SEMICOLON
-&kp A  &kp R  &kp S  &kp T    &kp G             &kp M      &kp N    &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D    &kp V             &kp K      &kp H    &kp COMMA  &kp DOT  &kp SLASH
-                     &mo EXT  &qt LSHIFT SPACE  &kp SPACE  &sl SYM
+&kp Q              &kp W            &kp F             &kp P              &kp B              &kp J                  &kp L                   &kp U              &kp Y             &kp SEMICOLON
+&hrmLeft LGUI A    &hrmLeft LALT R  &hrmLeft LCTRL S  &hrmLeft LSHIFT T  &kp G              &kp M                  &hrmRight LEFT_SHIFT N  &hrmRight LCTRL E  &hrmRight LALT I  &hrmRight LGUI O
+&hrmLeft LSHIFT Z  &kp X            &kp C             &kp D              &kp V              &kp K                  &kp H                   &kp COMMA          &kp DOT           &hrmRight LSHIFT SLASH
+                                                      &kp TAB            &customlt 4 SPACE  &customlt 4 BACKSPACE  &sl 0
             >;
         };
 
-        // Numbers and high frequency symbols
-
-        sym_layer {
-            label = "Sym.";
+        qwerty {
             bindings = <
-&kp N1        &kp N2       &kp N3       &kp N4       &kp N5       &kp N6      &kp N7       &kp N8        &kp N9        &kp N0
-&kp IT_LESS   &kp IT_USD   &kp IT_LPAR  &kp IT_LBRC  &kp IT_LBKT  &kp IT_EQL  &kp IT_QUES  &kp IT_SQUOT  &kp IT_MINUS  &kp IT_AST
-&kp IT_GREAT  &kp IT_PERC  &kp IT_RPAR  &kp IT_RBRC  &kp IT_RBKT  &kp IT_AT   &kp IT_EXCL  &kp IT_DQUOT  &kp IT_PLUS   &kp IT_FSLH
-                                        &mo FNC      &mo SYM2     &trans      &trans
+&trans  &trans           &kp E             &kp R              &kp T   &kp Y   &kp U               &kp I              &kp O             &kp P
+&trans  &hrmLeft LALT S  &hrmLeft LCTRL D  &hrmLeft LSHIFT F  &trans  &kp H   &hrmRight LSHIFT J  &hrmRight LCTRL K  &hrmRight LALT L  &hrmRight LGUI APOS
+&trans  &trans           &trans            &kp V              &kp B   &kp N   &kp M               &trans             &trans            &trans
+                                           &trans             &trans  &trans  &trans
             >;
         };
 
-        // Main modifiers and arrow keys
-
-        ext_layer {
-            label = "Mods";
+        game {
             bindings = <
-&kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
-&sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RALT     &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp TAB         &kp LC(V)    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
-                                              &trans          &kp LCTRL    &kp ENTER     &mo FNC
+&kp Q   &kp W  &kp E  &kp R     &kp T      &kp Y   &kp U   &kp I      &kp O    &kp P
+&kp A   &kp S  &kp D  &kp F     &kp G      &kp H   &kp J   &kp K      &kp L    &kp APOS
+&trans  &kp X  &kp C  &kp V     &kp B      &kp N   &kp M   &kp COMMA  &kp DOT  &trans
+                      &kp LALT  &kp SPACE  &trans  &trans
             >;
         };
 
-        // Function keys with modifiers
-
-        fnc_layer {
-            label = "FRow";
+        nav {
             bindings = <
-&kp F1    &kp F2    &kp F3      &kp F4     &kp F5    &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
-&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
-&none     &none     &none       &none      &none     &none    &none    &none            &none   &none
-                                &none      &none     &none    &none
+&trans        &trans        &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&sticky LGUI  &sticky LALT  &sticky LCTRL  &sticky LSHFT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans         &trans  &trans  &trans
             >;
         };
 
-        // Low frequency symbols.
-
-        symbols_2_layer {
-            label = "Sym.2";
-            bindings = <
-&kp IT_CARET  &kp IT_UNDER  &kp IT_PND   &kp IT_EUR   &kp IT_HASH  &none  &none  &none  &none  &none
-&kp IT_BKTK   &kp IT_TILDE  &kp IT_BSLH  &kp IT_PIPE  &kp IT_AND   &none  &none  &none  &none  &none
-&none         &none         &kp IT_SECT  &kp IT_CCED  &kp IT_DEG   &none  &none  &none  &none  &none
-                                         &none        &none        &none  &none
-            >;
-        };
-
-        // Used to type regional accents.
-
-        accent_layer {
-            label = "Accent";
-            bindings = <
-&none        &none        &none        &kp IT_CEGR  &none        &none  &none  &none  &none  &none
-&kp IT_AGRV  &kp IT_IGRV  &kp IT_OGRV  &kp IT_EGRV  &kp IT_EACU  &none  &none  &none  &none  &none
-&none        &none        &none        &kp IT_UGRV  &none        &none  &none  &none  &none  &none
-                                       &none        &none        &none  &none
-            >;
-        };
-
-        // Used to change the keyboard's settings.
-
-        settings_layer {
+        settings {
             label = "Sett.";
             bindings = <
 &bootloader     &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none  &unstick  &none  &bootloader
