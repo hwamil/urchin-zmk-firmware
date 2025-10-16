@@ -422,6 +422,11 @@
 
         func_mo {
             bindings = <&mo 5>;
+            key-positions = <30 33>;
+        };
+
+        num_tog {
+            bindings = <&tog 4>;
             key-positions = <31 32>;
         };
     };
@@ -479,10 +484,10 @@
 
         func {
             bindings = <
-&none  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none          &none          &none         &none
-&none  &kp F4  &kp F5  &kp F6  &kp F11  &none  &sticky LSHFT  &sticky LCTRL  &sticky LALT  &kp LGUI
-&none  &kp F1  &kp F2  &kp F3  &kp F12  &none  &none          &none          &none         &none
-                       &none   &none    &none  &none
+&unstick  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none          &none          &none         &none
+&none     &kp F4  &kp F5  &kp F6  &kp F11  &none  &sticky LSHFT  &sticky LCTRL  &sticky LALT  &kp LGUI
+&none     &kp F1  &kp F2  &kp F3  &kp F12  &none  &none          &none          &none         &none
+                          &none   &none    &none  &none
             >;
         };
     };
