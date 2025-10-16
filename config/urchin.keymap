@@ -414,6 +414,16 @@
             key-positions = <31 24>;
             layers = <2>;
         };
+
+        func_oneshot {
+            bindings = <&sl 5>;
+            key-positions = <30 31>;
+        };
+
+        func_mo {
+            bindings = <&mo 5>;
+            key-positions = <31 32>;
+        };
     };
 
     keymap {
@@ -427,7 +437,7 @@
 &kp Q              &kp W            &kp F             &kp P              &kp B              &kp J                  &kp L                   &kp U              &kp Y             &kp SEMICOLON
 &hrmLeft LGUI A    &hrmLeft LALT R  &hrmLeft LCTRL S  &hrmLeft LSHIFT T  &kp G              &kp M                  &hrmRight LEFT_SHIFT N  &hrmRight LCTRL E  &hrmRight LALT I  &hrmRight LGUI O
 &hrmLeft LSHIFT Z  &kp X            &kp C             &kp D              &kp V              &kp K                  &kp H                   &kp COMMA          &kp DOT           &hrmRight LSHIFT SLASH
-                                                      &kp TAB            &customlt 3 SPACE  &customlt 4 BACKSPACE  &customlt 5 DELETE
+                                                      &kp TAB            &customlt 3 SPACE  &customlt 4 BACKSPACE  &kp DELETE
             >;
         };
 
@@ -460,18 +470,18 @@
 
         num {
             bindings = <
-&kp LBKT   &kp N7  &kp N8  &kp N9         &kp RBKT   &none     &none      &unstick   &none     &none
-&kp SEMI   &kp N4  &kp N5  &kp N6         &kp EQUAL  &none     &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&kp GRAVE  &kp N1  &kp N2  &kp N3         &kp MINUS  &kp BSPC  &kp SPACE  &kp COMMA  &kp DOT   &kp FSLH
+&kp LBKT   &kp N7  &kp N8  &kp N9         &kp RBKT   &none     &none          &unstick       &none         &none
+&kp SEMI   &kp N4  &kp N5  &kp N6         &kp EQUAL  &none     &sticky LSHFT  &sticky LCTRL  &sticky LALT  &sticky LGUI
+&kp GRAVE  &kp N1  &kp N2  &kp N3         &kp MINUS  &kp BSPC  &kp SPACE      &kp COMMA      &kp DOT       &kp FSLH
                            &kp BACKSLASH  &kp N0     &none     &none
             >;
         };
 
         func {
             bindings = <
-&none  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none      &none      &none     &none
-&none  &kp F4  &kp F5  &kp F6  &kp F11  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-&none  &kp F1  &kp F2  &kp F3  &kp F12  &none  &none      &none      &none     &none
+&none  &kp F7  &kp F8  &kp F9  &kp F10  &none  &none          &none          &none         &none
+&none  &kp F4  &kp F5  &kp F6  &kp F11  &none  &sticky LSHFT  &sticky LCTRL  &sticky LALT  &kp LGUI
+&none  &kp F1  &kp F2  &kp F3  &kp F12  &none  &none          &none          &none         &none
                        &none   &none    &none  &none
             >;
         };
