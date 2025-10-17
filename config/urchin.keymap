@@ -453,6 +453,8 @@
 &trans  &trans           &trans            &kp V              &kp B   &kp N   &kp M               &trans             &trans            &trans
                                            &trans             &trans  &trans  &trans
             >;
+
+            label = "qwerty";
         };
 
         game {
@@ -462,6 +464,8 @@
 &trans  &kp X  &kp C  &kp V     &kp B      &kp N   &kp M   &kp COMMA  &kp DOT  &trans
                       &kp LALT  &kp SPACE  &trans  &trans
             >;
+
+            label = "game";
         };
 
         navmed {
@@ -471,6 +475,8 @@
 &undo         &cut          &copy          &paste         &redo  &kp C_BRIGHTNESS_DEC  &kp HOME        &kp PAGE_DOWN  &kp PG_UP        &kp END
                                            &none          &none  &kp C_STOP            &none
             >;
+
+            label = "navmed";
         };
 
         num {
@@ -480,6 +486,8 @@
 &kp GRAVE  &kp N1  &kp N2  &kp N3         &kp MINUS  &kp BSPC  &kp SPACE      &kp COMMA      &kp DOT       &kp FSLH
                            &kp BACKSLASH  &kp N0     &none     &none
             >;
+
+            label = "num";
         };
 
         func {
@@ -489,6 +497,8 @@
 &none     &kp F1  &kp F2  &kp F3  &kp F12  &none  &none          &none          &none         &none
                           &none   &none    &none  &none
             >;
+
+            label = "func";
         };
     };
 };
