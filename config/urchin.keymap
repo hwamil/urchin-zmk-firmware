@@ -259,13 +259,6 @@
             timeout-ms = <75>;
         };
 
-        wincap {
-            bindings = <&wincap>;
-            key-positions = <43 42 6 7>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <200>;
-        };
-
         paren {
             bindings = <&paren>;
             key-positions = <3 6>;
@@ -390,6 +383,11 @@
             bindings = <&kp ESCAPE>;
             key-positions = <4 3>;
             layers = <2>;
+        };
+
+        wincap {
+            bindings = <&wincap>;
+            key-positions = <6 7>;
         };
     };
 
