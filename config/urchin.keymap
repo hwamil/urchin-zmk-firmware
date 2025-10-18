@@ -57,6 +57,13 @@
             #binding-cells = <0>;
             bindings = <&en_win>, <&en_mac>;
         };
+
+        wincap: wincap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WINCAP";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(S))>, <&kp LA(LS(LC(S)))>;
+        };
     };
 
     hrmLeft: hrmLeft {
@@ -253,30 +260,8 @@
         };
 
         wincap {
-            bindings = <&kp LS(LA(LC(S)))>;
+            bindings = <&wincap>;
             key-positions = <43 42 6 7>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <200>;
-        };
-
-        clipboard {
-            bindings = <&kp LS(LA(LC(LG(C))))>;
-            key-positions = <2 3>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <200>;
-            layers = <0 1>;
-        };
-
-        math {
-            bindings = <&kp LA(LS(LC(M)))>;
-            key-positions = <26 27>;
-            timeout-ms = <75>;
-            require-prior-idle-ms = <200>;
-        };
-
-        searchcommands {
-            bindings = <&kp LS(LA(LC(LG(S))))>;
-            key-positions = <47 48 10 11 12 13>;
             timeout-ms = <75>;
             require-prior-idle-ms = <200>;
         };
@@ -387,7 +372,7 @@
 
         wsbnf {
             bindings = <&kp LA(S)>;
-            key-positions = <11 12>;
+            key-positions = <20 31>;
             layers = <0 1>;
         };
 
