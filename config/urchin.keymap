@@ -366,7 +366,6 @@
         wsbnf {
             bindings = <&kp LA(S)>;
             key-positions = <20 31>;
-            layers = <0 1>;
         };
 
         game {
