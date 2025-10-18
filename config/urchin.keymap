@@ -408,6 +408,11 @@
             bindings = <&tog 6>;
             key-positions = <32 33>;
         };
+
+        game_escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <8 9>;
+        };
     };
 
     keymap {
