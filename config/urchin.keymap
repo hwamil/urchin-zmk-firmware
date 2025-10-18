@@ -403,6 +403,11 @@
             bindings = <&to 2>;
             key-positions = <29 28>;
         };
+
+        mousetog {
+            bindings = <&tog 6>;
+            key-positions = <32 33>;
+        };
     };
 
     keymap {
