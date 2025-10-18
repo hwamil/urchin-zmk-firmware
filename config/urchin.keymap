@@ -409,7 +409,7 @@
             key-positions = <32 33>;
         };
 
-        game_escape {
+        game_esc {
             bindings = <&kp ESCAPE>;
             key-positions = <4 3>;
             layers = <2>;
