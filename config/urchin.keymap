@@ -402,7 +402,7 @@
 &kp Q              &kp W            &kp F             &kp P              &kp B              &kp J                  &kp L                   &kp U              &kp Y             &kp APOS
 &hrmLeft LGUI A    &hrmLeft LALT R  &hrmLeft LCTRL S  &hrmLeft LSHIFT T  &kp G              &kp M                  &hrmRight LEFT_SHIFT N  &hrmRight LCTRL E  &hrmRight LALT I  &hrmRight LGUI O
 &hrmLeft LSHIFT Z  &kp X            &kp C             &kp D              &kp V              &kp K                  &kp H                   &kp COMMA          &kp DOT           &hrmRight LSHIFT SLASH
-                                                      &kp TAB            &customlt 3 SPACE  &customlt 4 BACKSPACE  &kp DELETE
+                                                      &customlt 6 TAB    &customlt 3 SPACE  &customlt 4 BACKSPACE  &kp DELETE
             >;
         };
 
