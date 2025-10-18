@@ -323,37 +323,31 @@
         game_1 {
             bindings = <&kp NUMBER_1>;
             key-positions = <3 31>;
-            layers = <2>;
         };
 
         game_2 {
             bindings = <&kp NUMBER_2>;
             key-positions = <13 31>;
-            layers = <2>;
         };
 
         game_3 {
             bindings = <&kp NUMBER_3>;
             key-positions = <23 31>;
-            layers = <2>;
         };
 
         game_4 {
             bindings = <&kp NUMBER_4>;
             key-positions = <4 31>;
-            layers = <2>;
         };
 
         game_5 {
             bindings = <&kp N5>;
             key-positions = <31 14>;
-            layers = <2>;
         };
 
         game_6 {
             bindings = <&kp NUMBER_6>;
             key-positions = <31 24>;
-            layers = <2>;
         };
 
         func_oneshot {
