@@ -411,7 +411,8 @@
 
         game_escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <8 9>;
+            key-positions = <4 3>;
+            layers = <2>;
         };
     };
 
