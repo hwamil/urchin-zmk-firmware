@@ -336,6 +336,7 @@
         func_mo {
             bindings = <&mo 5>;
             key-positions = <30 33>;
+            slow-release;
         };
 
         num_tog {
@@ -387,6 +388,16 @@
         wincap {
             bindings = <&wincap>;
             key-positions = <6 7>;
+        };
+
+        bootloader_left {
+            bindings = <&bootloader>;
+            key-positions = <31 12 10 14>;
+        };
+
+        bootloader_right {
+            bindings = <&bootloader>;
+            key-positions = <15 17 19 32>;
         };
     };
 
