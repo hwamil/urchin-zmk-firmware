@@ -28,6 +28,8 @@
     ignore-modifiers;
 };
 
+&sl { ignore-modifiers; };
+
 / {
     behaviors {
         // Enables holding the first mod-tap key
