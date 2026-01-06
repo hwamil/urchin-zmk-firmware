@@ -410,6 +410,11 @@
             bindings = <&wincap>;
             key-positions = <6 7>;
         };
+
+        blend {
+            bindings = <&to 7>;
+            key-positions = <20 21>;
+        };
     };
 
     keymap {
@@ -491,6 +496,16 @@
             >;
 
             label = "mouse";
+        };
+
+        blender {
+            label = "blender";
+            bindings = <
+&kp Q            &kp W                 &kp E             &kp R              &kp T           &kp Y      &kp U                   &kp I              &kp O                 &kp P
+&hrmLeft LGUI A  &hrmRight LEFT_ALT S  &hrmLeft LCTRL D  &hrmLeft LSHIFT F  &kp G           &kp H      &hrmRight LEFT_SHIFT J  &hrmRight LCTRL K  &hrmRight LEFT_ALT L  &hrmRight LGUI APOS
+&kp Z            &kp X                 &kp C             &kp V              &kp B           &kp N      &kp M                   &kp COMMA          &kp DOT               &kp SLASH
+                                                         &customlt 4 TAB    &kp LEFT_SHIFT  &kp SPACE  &kp RIGHT_ALT
+            >;
         };
     };
 };
