@@ -270,7 +270,7 @@
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
-            layers = <0 1 7>;
+            layers = <0 1 3>;
             timeout-ms = <75>;
         };
 
@@ -350,18 +350,18 @@
         };
 
         func_oneshot {
-            bindings = <&sl 5>;
+            bindings = <&sl 6>;
             key-positions = <30 31>;
         };
 
         func_mo {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <30 33>;
             slow-release;
         };
 
         num_tog {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <31 32>;
         };
 
@@ -396,7 +396,7 @@
         };
 
         mousetog {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <32 33>;
         };
 
@@ -412,7 +412,7 @@
         };
 
         blend {
-            bindings = <&to 7>;
+            bindings = <&to 3>;
             key-positions = <20 21>;
         };
     };
@@ -428,7 +428,7 @@
 &kp Q              &kp W            &kp F             &kp P              &kp B              &kp J                  &kp L                   &kp U              &kp Y             &kp APOS
 &hrmLeft LGUI A    &hrmLeft LALT R  &hrmLeft LCTRL S  &hrmLeft LSHIFT T  &kp G              &kp M                  &hrmRight LEFT_SHIFT N  &hrmRight LCTRL E  &hrmRight LALT I  &hrmRight LGUI O
 &hrmLeft LSHIFT Z  &kp X            &kp C             &kp D              &kp V              &kp K                  &kp H                   &kp COMMA          &kp DOT           &hrmRight LSHIFT SLASH
-                                                      &customlt 6 TAB    &customlt 3 SPACE  &customlt 4 BACKSPACE  &kp DELETE
+                                                      &customlt 7 TAB    &customlt 4 SPACE  &customlt 5 BACKSPACE  &kp DELETE
             >;
         };
 
@@ -452,6 +452,16 @@
             >;
 
             label = "game";
+        };
+
+        blender {
+            label = "blender";
+            bindings = <
+&kp Q            &kp W                 &kp E             &kp R              &kp T           &kp Y      &kp U                   &kp I              &kp O                 &kp P
+&hrmLeft LGUI A  &hrmRight LEFT_ALT S  &hrmLeft LCTRL D  &hrmLeft LSHIFT F  &kp G           &kp H      &hrmRight LEFT_SHIFT J  &hrmRight LCTRL K  &hrmRight LEFT_ALT L  &hrmRight LGUI APOS
+&kp Z            &kp X                 &kp C             &kp V              &kp B           &kp N      &kp M                   &kp COMMA          &kp DOT               &kp SLASH
+                                                         &customlt 5 TAB    &kp LEFT_SHIFT  &kp SPACE  &kp RIGHT_ALT
+            >;
         };
 
         navmed {
@@ -496,16 +506,6 @@
             >;
 
             label = "mouse";
-        };
-
-        blender {
-            label = "blender";
-            bindings = <
-&kp Q            &kp W                 &kp E             &kp R              &kp T           &kp Y      &kp U                   &kp I              &kp O                 &kp P
-&hrmLeft LGUI A  &hrmRight LEFT_ALT S  &hrmLeft LCTRL D  &hrmLeft LSHIFT F  &kp G           &kp H      &hrmRight LEFT_SHIFT J  &hrmRight LCTRL K  &hrmRight LEFT_ALT L  &hrmRight LGUI APOS
-&kp Z            &kp X                 &kp C             &kp V              &kp B           &kp N      &kp M                   &kp COMMA          &kp DOT               &kp SLASH
-                                                         &customlt 4 TAB    &kp LEFT_SHIFT  &kp SPACE  &kp RIGHT_ALT
-            >;
         };
     };
 };
