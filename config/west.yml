@@ -22,6 +22,6 @@ manifest:
       revision: main
     - name: nice-view-gem
       remote: m165437
-      revision: 0.3.0 # main is LVGL9 and not compatible
+      revision: main # main is LVGL9 and not compatible
   self:
     path: config
